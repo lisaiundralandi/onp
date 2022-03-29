@@ -17,8 +17,8 @@ class InfixConverterTest {
 
     @Test
     void shouldConvertWithDifferentPriority() {
-        String result = infixConverter.convert(new Scanner("2 + 5 * 4"));
-        assertEquals("2.0 5.0 4.0 * + ", result);
+        String result = infixConverter.convert(new Scanner("2 + 5 * 4 % 4"));
+        assertEquals("2.0 5.0 4.0 * 4.0 % + ", result);
     }
 
     @Test
