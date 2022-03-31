@@ -38,3 +38,16 @@ calculator.put(2);
 calculator.calculate(Operation.ADD);
 assertEquals(7,calculator.getResult());
 ```
+
+### Konwersja notacji infiksowej
+Projekt umożliwia konwertowanie notacji infiksowej (tradycyjnej)
+na notację sufiksową (ONP). Do tego celu służy klasa `InfixConverter`.
+Ta klasa wspiera możliwość dostosowania formatu wyjściowego – 
+poprzez dostarczenie własnej implementacji `OnpBuilder`.
+
+Przykład użycia – tworzenie Stringa:
+```java
+String result = infixConverter.convert(new Scanner("2 + 5 * 4 % 4"));
+assertEquals("2.0 5.0 4.0 * 4.0 % + ", result);
+```
+Uwaga: Liczby i operatory muszą być oddzielone spacjami.
