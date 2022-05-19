@@ -51,3 +51,6 @@ String result = infixConverter.convert(new Scanner("2 + 5 * 4 % 4"));
 assertEquals("2.0 5.0 4.0 * 4.0 % + ", result);
 ```
 Uwaga: Liczby i operatory muszą być oddzielone spacjami.
+
+## Scenariusze Cucumber
+Scenariusze znajdują się w folderze [src/test/resources/scenarios](src/test/resources/scenarios).
